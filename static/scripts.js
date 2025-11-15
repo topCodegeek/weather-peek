@@ -25,6 +25,8 @@ async function getWeather() {
         document.body.className = 'rainy';
       } else if (condition === "Clouds") {
         document.body.className = 'cloudy';
+      } else if (condition === "Haze") {
+        document.body.className = 'haze';
       }
 
       // Display result
