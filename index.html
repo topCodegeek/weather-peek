@@ -2,31 +2,49 @@
 <html lang="en">
 <head>
 
-  <title>WeatherPeek: The Weather App</title>
+  <title>AtmosChem – Weather & Air Quality App</title>
 
   <!-- Meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Check weather by city.">
-  <meta name="keywords" content="weatherpeek, weather app, sanchit meshram, ishaan topkar">
-  <meta name="author" content="Sanchit Meshram, Ishaan Topkar">
+  <meta name="description" content="Check real-time weather, AQI and chemistry facts behind atmospheric conditions. A clean, student-built weather & air quality app.">
+  <meta name="keywords" content="weather, AQI, chemistry, pollution, climate, air quality, ishaan topkar, sanchit meshram">
+  <meta name="author" content="Ishaan Topkar, Sanchit Meshram">
   
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="AtmosChem – Weather & AQI Insights">
+  <meta property="og:description" content="Get weather details, air quality index, and the chemistry behind weather conditions. Simple and interactive.">
+  <meta property="og:image" content="https://atmoschem.netlify.app/static/images/sky.jpg">
+  <meta property="og:url" content="https://atmoschem.netlify.app/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AtmosChem – Weather & Air Quality">
+  <meta name="twitter:description" content="Live weather, AQI and chemistry explanations in one place.">
+  <meta name="twitter:image" content="https://atmoschem.netlify.app/static/images/sky.jpg">
+
   <!-- Links and imports -->
   <link rel="stylesheet" href="static/styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"/> <!-- Remixicon -->
 
   <!-- Google site verification -->
   <meta name="google-site-verification" content="Sr6Pg4qY5IgiChOd4s5OAopZfRYEPnjFykw0dPiu5Dk" />
 
 </head>
 <body>
+  <!-- Initial Box -->
   <div class="container">
     <img src="/static/images/sky.jpg" alt="Weather Icon" width="50" height="50" style="border-radius: 50%">
-    <h1>WeatherPeek</h1>
+    <h1>AtmosChem</h1>
     <p>
-      Search for the current weather at any place.<br>
-      Get the corrosponding AQI.<br> Or read a fact about that weather.
-    </p>
+      Check real-time weather and AQI.<br>
+      Read chemistry facts behind atmospheric conditions.<br>
+      A clean, student-built weather & air quality app.
+    </p><br>
     <form id="weatherForm">
       <input type="text" id="cityInput" placeholder="Enter city name">
       <button type="submit">Check Weather</button>
@@ -42,11 +60,14 @@
       <div id="extraContent" style="margin-top:1rem;"></div>
     </div>
   </div>
-  <script src="/static/scripts.js"></script>
+
+  <!-- Footer -->
   <footer style="margin-top: 30px; font-size: 14px; color: gray;">
     <p>Developers: Sanchit Meshram, Ishaan Topkar, 
       Sarthak Shrawge and Shreyash Rathod</p> 
     <p>WeatherPeek © 2025</p>
   </footer>
+
+  <script src="/static/scripts.js"></script>
 </body>
 </html>

@@ -22,14 +22,17 @@ async function getWeather() {
       else if (condition === "Haze") document.body.className = 'haze';
 
       // ----- DISPLAY WEATHER -----
+      document.getElementById("weatherResult").classList.remove("fade-in");
       document.getElementById('weatherResult').innerHTML = `
         <h2>${data.name}, ${data.sys.country}</h2>
-        <p>Temperature: ${data.main.temp} °C</p>
-        <p>Humidity: ${data.main.humidity}%</p>
-        <p>Wind Speed: ${data.wind.speed} m/s</p>
-        <p>Condition: ${data.weather[0].main}</p>
+        <p><i class="ri-temp-hot-line"></i> Temperature: ${data.main.temp} °C</p>
+        <p><i class="ri-water-percent-line"></i> Humidity: ${data.main.humidity}%</p>
+        <p><i class="ri-windy-line"></i> Wind Speed: ${data.wind.speed} m/s</p>
+        <p><i class="ri-cloud-line"></i> Condition: ${data.weather[0].main}</p>
         <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" />
       `;
+      document.getElementById("weatherResult").classList.add("fade-in"); // Animation add
+
 
       // Prepare facts based on condition
       currentFacts = getChemistryFact(condition);
@@ -92,6 +95,7 @@ async function getAirQuality(lat, lon) {
 
   } catch (err) {
     currentAQI = "<p style='color:red;'>Unable to load AQI.</p>";
+    extraContent.innerHTML = currentAQI;
   }
 }
 
