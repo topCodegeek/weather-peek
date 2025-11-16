@@ -23,12 +23,24 @@
   <div class="container">
     <img src="/static/images/sky.jpg" alt="Weather Icon" width="50" height="50" style="border-radius: 50%">
     <h1>WeatherPeek</h1>
-    <p>Type your city name to check the current weather instantly!</p>
+    <p>
+      Search for the current weather at any place.<br>
+      Get the corrosponding AQI.<br> Or read a fact about that weather.
+    </p>
     <form id="weatherForm">
       <input type="text" id="cityInput" placeholder="Enter city name">
-      <button type="submit" onclick="getWeather()">Check Weather</button>
+      <button type="submit">Check Weather</button>
     </form>
     <div id="weatherResult"></div>
+
+    <div id="extraControls" class="hidden">
+      <div class="toggle-buttons">
+        <button id="btnAQI" class="active">AQI</button>
+        <button id="btnFacts">Chem Facts</button>
+      </div>
+
+      <div id="extraContent" style="margin-top:1rem;"></div>
+    </div>
   </div>
   <script src="/static/scripts.js"></script>
   <footer style="margin-top: 30px; font-size: 14px; color: gray;">

@@ -1,14 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* GLOBAL BODY */
 body {
   font-family: "Poppins", sans-serif;
-  background: #dbeafe;
+  background: #dbeafe;         /* default background */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin: 0;
 }
 
+/* MAIN CONTAINER */
 .container {
   background: white;
   margin: 2rem;
@@ -18,13 +24,15 @@ body {
   text-align: center;
 }
 
+
+/* INPUT & FORM BUTTON */
 input {
   padding: 10px;
   width: 60%;
   margin-bottom: 10px;
 }
 
-button {
+form button {
   padding: 10px 20px;
   background-color: #2563eb;
   color: white;
@@ -33,20 +41,64 @@ button {
   cursor: pointer;
 }
 
-footer{
-  text-align: center;
-}
-footer p {
-  background: white;
-  color: black;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
 
+/* WEATHER RESULT BOX */
 #weatherResult {
   margin-top: 20px;
 }
 
+
+/* TAB BUTTONS (AQI / FACTS) */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tab-buttons button {
+  padding: 10px 20px;
+  border: none;
+  background: #e5e7eb;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.tab-buttons button.active {
+  background: #2563eb;
+  color: white;
+}
+
+
+/* TOGGLE BUTTON STYLE (IF USED ANYWHERE ELSE) */
+.toggle-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.toggle-buttons button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  background: #ddd;
+  color: #333;
+  transition: 0.25s;
+}
+
+.toggle-buttons button.active {
+  background: #4a90e2;
+  color: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+
+/* BACKGROUND IMAGES FOR WEATHER CONDITIONS */
 body.sunny {
   background-image: url('/static/images/sunny.jpg');
   background-size: cover;
@@ -59,7 +111,7 @@ body.rainy {
   background-position: center;
 }
 
-body.haze{
+body.haze {
   background-image: url('/static/images/haze.jpg');
   background-size: cover;
   background-position: center;
@@ -73,4 +125,27 @@ body.cloudy {
 
 body.default {
   background-color: #f0f8ff;
+}
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: auto;               /* sticks footer to bottom */
+  padding: 10px 0;
+  width: 100%;
+}
+
+footer p {
+  background: white;
+  color: black;
+  margin: auto 2rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+
+/* HIDE ELEMENTS */
+.hidden {
+  display: none;
 }
